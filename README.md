@@ -1,0 +1,3 @@
+- Run `npm start`
+- https://github.com/thorsten-gehrig/alexa-remote-control
+  - copy `alexa_remote_control.sh` in root dir
