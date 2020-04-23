@@ -4,4 +4,4 @@
   
 ## Using Docker
 - `docker build -t esp-pir-endpoint .`
-- `docker run -p 9052:9052 esp-pir-endpoint`
+- `docker run -d -p 9052:9052 esp-pir-endpoint`
