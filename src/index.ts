@@ -40,10 +40,10 @@ app.post('/movement', (req: Request, res: Response) => {
     const now = new Date();
     let logMessage = `${now} movement detected!`;
     
-    //onForTimespan(3 * 60);
+    // onForTimespan(3 * 60);
 
     if (!cachedDate || cachedDate.getTime() + LIMIT < now.getTime()) {
-        //exec("./alexa_remote_control.sh -d 'Philippes Echo Flex' -e automation:'Kleines Licht'", puts);
+        // exec("./alexa_remote_control.sh -d 'Philippes Echo Flex' -e automation:'Kleines Licht'", puts);
         console.log(`${now.toISOString()}: triggered!`);
         logMessage += ` triggered!\n`;
         cachedDate = now;
