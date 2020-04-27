@@ -40,7 +40,7 @@ app.post('/movement', (req: Request, res: Response) => {
     const now = new Date();
     let logMessage = `${now} movement detected!`;
     
-    // onForTimespan(3 * 60);
+    //onForTimespan(3 * 60);
 
     if (!cachedDate || cachedDate.getTime() + LIMIT < now.getTime()) {
         // exec("./alexa_remote_control.sh -d 'Philippes Echo Flex' -e automation:'Kleines Licht'", puts);
@@ -56,7 +56,7 @@ app.post('/movement', (req: Request, res: Response) => {
         if (err) {
             return res.status(500).send(`Error writing to file!`);
         }
-        // console.log(`Saved @ ${now.toISOString()}!`);
+        //console.log(`Saved @ ${now.toISOString()}!`);
     });
 
     res.status(200).end();
