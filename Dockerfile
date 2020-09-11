@@ -18,6 +18,7 @@ WORKDIR /app
 # copy dist/ and node_modules/
 COPY --from=BUILD_IMAGE /app/dist ./dist
 COPY --from=BUILD_IMAGE /app/node_modules ./node_modules
+COPY --from=BUILD_IMAGE /app/alexa-remote-control ./alexa-remote-control
 
 # run
 CMD [ "node", "./dist" ]
