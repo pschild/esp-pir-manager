@@ -1,6 +1,9 @@
 - Run `npm start`
-- https://github.com/thorsten-gehrig/alexa-remote-control
-  - copy `alexa_remote_control.sh` in root dir
+
+## Info
+`alexa-remote-control/alexa_remote_control.sh` is copied from https://github.com/thorsten-gehrig/alexa-remote-control
+
+See this repository for more information.
   
 ## Using Docker
 - `docker build -t esp-pir-manager .`
