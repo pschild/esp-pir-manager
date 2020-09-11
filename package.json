@@ -1,5 +1,5 @@
 {
-  "name": "esp-pir-endpoint",
+  "name": "esp-pir-manager",
   "version": "1.0.0",
   "description": "Update Server for ESP Modules",
   "main": "index.js",
