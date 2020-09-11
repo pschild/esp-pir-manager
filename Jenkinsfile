@@ -2,4 +2,4 @@ def lib = library identifier: 'jenkins-esp-build-library@master', retriever: mod
     [$class: 'GitSCMSource', remote: 'https://github.com/pschild/jenkins-esp-build-library.git']
 )
 
-nodeServicePipeline(repoUrl: 'https://github.com/pschild/esp-pir-endpoint.git')
+nodeServicePipeline(repoUrl: 'https://github.com/pschild/esp-pir-manager.git')
