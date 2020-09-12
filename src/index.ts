@@ -10,8 +10,8 @@ const port = 9052;
 
 const puts = (error, stdout, stderr) => { sys.puts(stdout) };
 
-const LIMIT = 60 * 60 * 1000; // 60 minutes
-let cachedDate;
+/*const LIMIT = 60 * 60 * 1000; // 60 minutes
+let cachedDate;*/
 
 app.get('/', (req, res) => {
     console.log(JSON.stringify(req.headers));
@@ -19,6 +19,10 @@ app.get('/', (req, res) => {
 });
 
 app.get('/on', (req, res) => {
+    exec("./alexa-remote-control/alexa_remote_control.sh -d 'Philippes Echo Flex' -e automation:'Kleines Licht'", puts);
+});
+
+/*app.get('/on', (req, res) => {
     axios.get('http://192.168.178.48/on').then(r => {
         res.status(200).json({ status: 'on' });
     });
@@ -60,7 +64,7 @@ app.post('/movement', (req: Request, res: Response) => {
     });
 
     res.status(200).end();
-});
+});*/
 
 app.listen(port, () => {
     console.log(`running at http://localhost:${port}`);
