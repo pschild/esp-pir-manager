@@ -8,9 +8,9 @@ var exec = require('child_process').exec;
 const app: Application = express();
 const port = 9052;
 
-const puts = (error, stdout, stderr) => { sys.puts(stdout) };
+/*const puts = (error, stdout, stderr) => { sys.puts(stdout) };
 
-/*const LIMIT = 60 * 60 * 1000; // 60 minutes
+const LIMIT = 60 * 60 * 1000; // 60 minutes
 let cachedDate;*/
 
 app.get('/', (req, res) => {
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/on', (req, res) => {
-    exec("./alexa-remote-control/alexa_remote_control.sh -d 'Philippes Echo Flex' -e automation:'Kleines Licht'", puts);
+    exec("./alexa-remote-control/alexa_remote_control.sh -d 'Philippes Echo Flex' -e automation:'Kleines Licht'", console.log);
 });
 
 /*app.get('/on', (req, res) => {
