@@ -15,6 +15,9 @@ RUN npm prune --production
 FROM node:13-alpine
 WORKDIR /app
 
+# install dependencies for alexa-remote-control
+RUN apk update && apk add curl jq
+
 # copy dist/ and node_modules/
 COPY --from=BUILD_IMAGE /app/dist ./dist
 COPY --from=BUILD_IMAGE /app/node_modules ./node_modules

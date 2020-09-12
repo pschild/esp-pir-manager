@@ -68,8 +68,8 @@
 #
 ##########################################
 
-SET_EMAIL='amazon_account@email.address'
-SET_PASSWORD='Very_Secret_Amazon_Account_Password'
+SET_EMAIL='$AMAZON_EMAIL'
+SET_PASSWORD='$AMAZON_PASSWORD'
 SET_MFA_SECRET=''
 # something like:
 #  1234 5678 9ABC DEFG HIJK LMNO PQRS TUVW XYZ0 1234 5678 9ABC DEFG
