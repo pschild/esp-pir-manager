@@ -16,8 +16,9 @@ SET_PASSWORD='Very_Secret_Amazon_Account_Password'
 ```
 with
 ```
-SET_EMAIL=$(grep AMAZON_EMAIL variables.env | cut -d '=' -f2)
-SET_PASSWORD=$(grep AMAZON_PASSWORD variables.env | cut -d '=' -f2)
+DIRECTORY=$(cd `dirname $0` && pwd)
+SET_EMAIL=$(grep AMAZON_EMAIL ${DIRECTORY}/variables.env | cut -d '=' -f2)
+SET_PASSWORD=$(grep AMAZON_PASSWORD ${DIRECTORY}/variables.env | cut -d '=' -f2)
 ```
   
 ## Using Docker
