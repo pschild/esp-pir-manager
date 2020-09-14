@@ -2,15 +2,12 @@ import * as express from 'express';
 import { Application, Request, Response } from 'express';
 import * as fs from 'fs';
 import axios from 'axios';
-var sys = require('sys')
 var exec = require('child_process').exec;
 
 const app: Application = express();
 const port = 9052;
 
-/*const puts = (error, stdout, stderr) => { sys.puts(stdout) };
-
-const LIMIT = 60 * 60 * 1000; // 60 minutes
+/*const LIMIT = 60 * 60 * 1000; // 60 minutes
 let cachedDate;*/
 
 app.get('/', (req, res) => {
