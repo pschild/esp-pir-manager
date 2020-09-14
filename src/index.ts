@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/on', (req, res) => {
     exec("./alexa-remote-control/alexa_remote_control.sh -d 'Philippes Echo Flex' -e automation:'Kleines Licht'", console.log);
+    res.status(200).json({ status: 'ready' });
 });
 
 /*app.get('/on', (req, res) => {
