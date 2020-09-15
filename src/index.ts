@@ -15,8 +15,11 @@ app.get('/speak/:speech', (req, res) => {
             console.error(`exec error: ${error}`);
             return res.status(500).json({ status: 'error', error });
         }
+        if (stderr) {
+            console.error(`stderr: ${stderr}`);
+            return res.status(500).json({ status: 'stderr', stderr });
+        }
         console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
         return res.status(200).json({ status: 'success', stdout });
     });
 });
@@ -29,8 +32,11 @@ app.get('/automation/:routineName', (req, res) => {
             console.error(`exec error: ${error}`);
             return res.status(500).json({ status: 'error', error });
         }
+        if (stderr) {
+            console.error(`stderr: ${stderr}`);
+            return res.status(500).json({ status: 'stderr', stderr });
+        }
         console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
         return res.status(200).json({ status: 'success', stdout });
     });
 });
@@ -41,8 +47,11 @@ app.get('/show-alexa-devices', (req, res) => {
             console.error(`exec error: ${error}`);
             return res.status(500).json({ status: 'error', error });
         }
+        if (stderr) {
+            console.error(`stderr: ${stderr}`);
+            return res.status(500).json({ status: 'stderr', stderr });
+        }
         console.log(`stdout: ${stdout}`);
-        console.error(`stderr: ${stderr}`);
         return res.status(200).json({ status: 'success', stdout });
     });
 });
