@@ -70,11 +70,8 @@
 
 DIRECTORY=$(cd `dirname $0` && pwd)
 SET_EMAIL=$(grep AMAZON_EMAIL ${DIRECTORY}/env/variables.env | cut -d '=' -f2)
-echo $SET_EMAIL
 SET_PASSWORD=$(grep AMAZON_PASSWORD ${DIRECTORY}/env/variables.env | cut -d '=' -f2)
-echo $SET_PASSWORD
 SET_MFA_SECRET=$(grep AMAZON_MFA_SECRET ${DIRECTORY}/env/variables.env | cut -d '=' -f2)
-echo $SET_MFA_SECRET
 # something like:
 #  1234 5678 9ABC DEFG HIJK LMNO PQRS TUVW XYZ0 1234 5678 9ABC DEFG
 
