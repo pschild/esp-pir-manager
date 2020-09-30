@@ -9,7 +9,6 @@ const app: Application = express();
 const port = 9052;
 
 const mqttClient = mqtt.connect('http://esp-mqtt-broker:1883', { clientId: 'esp-pir-manager' });
-// const mqttClient = mqtt.connect('http://192.168.178.28:1883', { clientId: 'esp-pir-manager' });
 // const mqttClient = mqtt.connect('http://broker.emqx.io', { clientId: 'esp-pir-manager' }); // testing
 mqttClient.subscribe('ESP_7888034/movement');
 
