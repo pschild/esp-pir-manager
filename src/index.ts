@@ -8,8 +8,8 @@ import { filter, map, mergeMap, tap, throttleTime } from 'rxjs/operators';
 const app: Application = express();
 const port = 9052;
 
-const mqttClient = mqtt.connect('http://192.168.178.28:1883', { clientId: process.env.npm_package_name });
-// const mqttClient = mqtt.connect('http://broker.emqx.io', { clientId: process.env.npm_package_name }); // testing
+const mqttClient = mqtt.connect('http://192.168.178.28:1883', { clientId: 'esp-pir-manager' });
+// const mqttClient = mqtt.connect('http://broker.emqx.io', { clientId: 'esp-pir-manager' }); // testing
 mqttClient.subscribe('ESP_7888034/movement');
 
 function ofTopicEquals(topicName: string) {
