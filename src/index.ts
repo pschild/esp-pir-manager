@@ -29,7 +29,7 @@ const messages$ = fromEvent(mqttClient, 'message').pipe(
 messages$.pipe(
     ofTopicEquals('ESP_7888034/movement'),
     tap(_ => log('Detected topic...')),
-    filter(([topic, message]) => getHours(new Date()) >= 23 || getHours(new Date()) <= 8), // only trigger between 23:00 and 08:59
+    filter(([topic, message]) => getHours(new Date()) >= 22 || getHours(new Date()) <= 6), // only trigger between 22:00 and 06:59
     tap(_ => log('Passed hour check...')),
     throttleTime(1000 * 60 * 5), // throttle for 5 min
     tap(_ => log('Passed throttle check...')),
